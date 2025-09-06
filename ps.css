@@ -112,6 +112,197 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
+/* Sustainability Section Styles */
+.sustainability-section {
+    background: linear-gradient(135deg, #001a0d 0%, #003d1f 100%);
+    position: relative;
+}
+
+.sustainability-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fefefe;
+    background-image: radial-gradient(circle, rgba(0,0,0,0.9) 1px, transparent 1px);
+    background-size: 20px 20px;
+
+    opacity: 0.05;
+    z-index: 0;
+}
+
+.eco-banner {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 800px;
+    padding: 40px;
+    background: rgba(0,255,100,0.05);
+    border-radius: 20px;
+    border: 1px solid rgba(0,255,100,0.2);
+    position: relative;
+    z-index: 1;
+}
+
+.eco-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.eco-headline {
+    font-size: 1.8rem;
+    background: linear-gradient(90deg, #00ff64 0%, #00ffcc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.sustainability-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 60px auto;
+    position: relative;
+    z-index: 1;
+}
+
+.sustain-card {
+    background: rgba(0,255,100,0.03);
+    border: 1px solid rgba(0,255,100,0.2);
+    border-radius: 20px;
+    padding: 40px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.sustain-card::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(0,255,100,0.1) 0%, transparent 70%);
+    transition: all 0.5s ease;
+}
+
+.sustain-card:hover::before {
+    top: -150%;
+    left: -150%;
+}
+
+.sustain-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    background: rgba(0,255,100,0.08);
+    box-shadow: 0 20px 40px rgba(0,255,100,0.2);
+}
+
+.sustain-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.sustain-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #00ff64;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.sustain-description {
+    color: #aaa;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.sustain-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0,255,100,0.1);
+    border-radius: 15px;
+    border: 1px solid rgba(0,255,100,0.2);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #00ff64 0%, #00ffcc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.stat-label {
+    color: #666;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    margin-top: 5px;
+}
+
+.impact-statement {
+    max-width: 900px;
+    margin: 60px auto;
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(135deg, rgba(0,255,100,0.05) 0%, rgba(0,255,204,0.02) 100%);
+    border-radius: 25px;
+    border: 2px solid rgba(0,255,100,0.2);
+    position: relative;
+    z-index: 1;
+}
+
+.impact-statement h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #00ff64 0%, #00ffcc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.impact-statement p {
+    color: #ccc;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.impact-badges {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.badge {
+    padding: 10px 25px;
+    background: rgba(0,255,100,0.1);
+    border: 1px solid rgba(0,255,100,0.3);
+    border-radius: 50px;
+    color: #00ff64;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.badge:hover {
+    background: rgba(0,255,100,0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,255,100,0.2);
+}
 
 /* Feature Grid */
 .feature-grid {
